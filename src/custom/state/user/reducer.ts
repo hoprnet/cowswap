@@ -33,6 +33,12 @@ import { serializeToken } from './hooks'
 
 const currentTimestamp = () => new Date().getTime()
 
+type TokenByChain = {
+  [address: string]: SerializedToken
+}
+type FavouriteTokens = {
+  [chainId: number]: TokenByChain
+}
 export interface UserState {
   // the timestamp of the last updateVersion action
   lastUpdateVersionTimestamp?: number
@@ -79,30 +85,28 @@ export interface UserState {
   showSurveyPopup: boolean | undefined
 
   // mod, favourite tokens
-  favouriteTokens: {
-    [chainId: number]: {
-      [address: string]: SerializedToken
-    }
-  }
+  favouriteTokens: FavouriteTokens
 }
 
 function pairKey(token0Address: string, token1Address: string) {
   return `${token0Address};${token1Address}`
 }
 
-function _initialSavedTokensState() {
-  return ALL_SUPPORTED_CHAIN_IDS.reduce((acc, chain) => {
-    acc[chain] = COMMON_BASES[chain].reduce(
-      (acc2, curr) => {
+function _initialSavedTokensState(chainId?: number) {
+  if (chainId) {
+    return COMMON_BASES[chainId].reduce((acc2, curr) => {
+      acc2[curr.wrapped.address] = serializeToken(curr.wrapped)
+      return acc2
+    }, {} as TokenByChain)
+  } else {
+    return ALL_SUPPORTED_CHAIN_IDS.reduce((acc, chain) => {
+      acc[chain] = COMMON_BASES[chain].reduce((acc2, curr) => {
         acc2[curr.wrapped.address] = serializeToken(curr.wrapped)
         return acc2
-      },
-      {} as {
-        [address: string]: SerializedToken
-      }
-    )
-    return acc
-  }, {} as UserState['favouriteTokens'])
+      }, {} as TokenByChain)
+      return acc
+    }, {} as FavouriteTokens)
+  }
 }
 
 export const initialState: UserState = {
@@ -123,7 +127,7 @@ export const initialState: UserState = {
   URLWarningVisible: true,
   showSurveyPopup: undefined,
   // mod, favourite tokens
-  favouriteTokens: _initialSavedTokensState(),
+  favouriteTokens: _initialSavedTokensState() as FavouriteTokens,
 }
 
 export default createReducer(initialState, (builder) =>
@@ -242,7 +246,7 @@ export default createReducer(initialState, (builder) =>
       const { chainId, address } = serializedToken
 
       if (!state.favouriteTokens?.[chainId]) {
-        state.favouriteTokens = _initialSavedTokensState()
+        state.favouriteTokens = _initialSavedTokensState() as FavouriteTokens
       }
 
       if (!state.favouriteTokens[chainId][address]) {
@@ -252,6 +256,6 @@ export default createReducer(initialState, (builder) =>
       }
     })
     .addCase(removeAllFavouriteTokens, (state, { payload: { chainId } }) => {
-      state.favouriteTokens = _initialSavedTokensState()
+      state.favouriteTokens[chainId] = _initialSavedTokensState(chainId) as TokenByChain
     })
 )
