@@ -180,6 +180,7 @@
     "@uniswap/v3-sdk": "^3.8.2"
   },
   "scripts": {
+    "start:prod": "REACT_APP_FORCE_PRODUCTION=true yarn start:default",
     "start:default": "craco start",
     "start": "REACT_APP_DISABLE_TOKEN_WARNING=true yarn start:default",
     "start:ssl": "HTTPS=true yarn start",

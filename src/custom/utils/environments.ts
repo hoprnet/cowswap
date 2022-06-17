@@ -13,6 +13,21 @@ export interface EnvironmentChecks {
 }
 
 export function checkEnvironment(host: string, path: string): EnvironmentChecks {
+  if (process.env.REACT_APP_FORCE_PRODUCTION) {
+    return {
+      // Project environments
+      isLocal: false,
+      isDev: false,
+      isPr: false,
+      isStaging: false,
+      isProd: true,
+      isEns: false,
+
+      // Environment used for Backend workflow
+      //  Latest stable version pointing to the DEV api
+      isBarn: false,
+    }
+  }
   // Domain regex
   const domainLocalRegex = getRegex(process.env.REACT_APP_DOMAIN_REGEX_LOCAL)
   const domainPrRegex = getRegex(process.env.REACT_APP_DOMAIN_REGEX_PR)
