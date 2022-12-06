@@ -48,6 +48,9 @@ const Header = styled.div`
     overflow: hidden;
     font-size: 13px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 `
 
