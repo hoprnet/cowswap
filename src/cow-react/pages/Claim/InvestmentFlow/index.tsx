@@ -29,7 +29,7 @@ import { ClaimStatus } from 'state/claim/actions'
 import { InvestClaim } from 'state/claim/reducer'
 import { calculateInvestmentAmounts } from 'state/claim/hooks/utils'
 
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 
 import InvestOption from './InvestOption'
 import { ClaimCommonTypes, ClaimWithInvestmentData, EnhancedUserClaimData } from '../types'

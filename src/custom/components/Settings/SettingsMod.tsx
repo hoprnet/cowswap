@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-restricted-imports
 import { Trans } from '@lingui/macro'
 // import { Percent } from '@uniswap/sdk-core'
-// import { useWeb3React } from '@web3-react/core'
+// import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 // import { AUTO_ROUTER_SUPPORTED_CHAINS } from 'lib/hooks/routing/clientSideSmartOrderRouter'
 import { useCallback, useContext, useRef, useState } from 'react'
 import { Settings } from 'react-feather'

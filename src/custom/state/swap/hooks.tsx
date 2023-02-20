@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-restricted-imports
 import { t } from '@lingui/macro'
 import { Currency, CurrencyAmount, NativeCurrency, Percent, Token /* TradeType, */ } from '@uniswap/sdk-core'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 // import useAutoSlippageTolerance from 'hooks/useAutoSlippageTolerance'
 // import { useBestTrade } from 'hooks/useBestTrade'
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount'

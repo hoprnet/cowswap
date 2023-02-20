@@ -1,4 +1,4 @@
-// import { useWeb3React } from '@web3-react/core'
+// import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import AddressClaimModal from 'components/claim/AddressClaimModal'
 // import ConnectedAccountBlocked from 'components/ConnectedAccountBlocked'
 // import useAccountRiskCheck from 'hooks/useAccountRiskCheck'

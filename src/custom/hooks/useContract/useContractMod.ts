@@ -27,7 +27,7 @@ import ENS_ABI from 'abis/ens-registrar.json'
 //   V3_MIGRATOR_ADDRESSES,
 // } from 'constants/addresses'
 // import { WRAPPED_NATIVE_CURRENCY } from 'constants/tokens'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 // import { useMemo } from 'react'
 // import { NonfungiblePositionManager, Quoter, TickLens, UniswapInterfaceMulticall } from 'types/v3'
 // import { V3Migrator } from 'types/v3/V3Migrator'

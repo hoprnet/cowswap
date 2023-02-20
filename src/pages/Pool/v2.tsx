@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
 import { Pair } from '@uniswap/v2-sdk'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { PageName } from 'components/AmplitudeAnalytics/constants'
 import { Trace } from 'components/AmplitudeAnalytics/Trace'
 import { UNSUPPORTED_V2POOL_CHAIN_IDS } from '@src/constants/chains'

@@ -19,7 +19,7 @@ import { useHasPendingApproval, useTransactionAdder } from 'state/enhancedTransa
 import { calculateGasMargin } from 'utils/calculateGasMargin'
 import { useTokenContract } from 'hooks/useContract'
 import { useTokenAllowance } from 'hooks/useTokenAllowance'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { ApproveCallbackState, OptionalApproveCallbackParams } from '.'
 import { useCurrency } from 'hooks/Tokens'
 import { OperationType } from 'components/TransactionConfirmationModal'

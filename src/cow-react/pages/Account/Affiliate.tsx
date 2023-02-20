@@ -23,7 +23,7 @@ import {
 import { SupportedChainId as ChainId } from '@cowprotocol/cow-sdk'
 import { formatInt, formatDecimal } from './utils'
 import useReferralLink from 'hooks/useReferralLink'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import useFetchProfile from 'hooks/useFetchProfile'
 import useTimeAgo from 'hooks/useTimeAgo'
 import NotificationBanner from 'components/NotificationBanner'

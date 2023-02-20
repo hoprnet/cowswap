@@ -1,5 +1,5 @@
 import { useCallback, useLayoutEffect, useMemo, useState } from 'react'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useTradeStateFromUrl } from './useTradeStateFromUrl'
 import { useResetStateWithSymbolDuplication } from './useResetStateWithSymbolDuplication'
 import { useTradeNavigate } from '../useTradeNavigate'

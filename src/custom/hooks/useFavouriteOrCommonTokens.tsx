@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { COMMON_BASES } from 'constants/routing'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useFavouriteTokens } from 'state/user/hooks'
 
 export function useFavouriteOrCommonTokens() {

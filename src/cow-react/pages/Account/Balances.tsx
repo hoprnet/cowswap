@@ -10,7 +10,7 @@ import {
   CardsLoader,
   CardsSpinner,
 } from '@cow/pages/Account/styled'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { getBlockExplorerUrl } from 'utils'
 import { formatMax, formatSmartLocaleAware } from '@cow/utils/format'
 import { MouseoverTooltipContent } from 'components/Tooltip'

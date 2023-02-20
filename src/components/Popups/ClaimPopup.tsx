@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
 import { CurrencyAmount, Token } from '@uniswap/sdk-core'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { sendEvent } from 'components/analytics'
 import { useCallback, useEffect } from 'react'
 import { Heart, X } from 'react-feather'

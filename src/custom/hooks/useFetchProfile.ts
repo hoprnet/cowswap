@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useEffect, useState } from 'react'
 import { getProfileData } from '@cow/api/gnosisProtocol'
 import { ProfileData } from '@cow/api/gnosisProtocol/api'

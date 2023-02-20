@@ -1,6 +1,6 @@
 import JSBI from 'jsbi'
 import { CurrencyAmount } from '@uniswap/sdk-core'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 
 import { ReceiptModal } from '@cow/modules/limitOrders/pure/ReceiptModal'
 import { calculatePrice } from '@cow/modules/limitOrders/utils/calculatePrice'

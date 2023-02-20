@@ -1,7 +1,7 @@
 // import { skipToken } from '@reduxjs/toolkit/query/react'
 import { Currency } from '@uniswap/sdk-core'
 import { FeeAmount, nearestUsableTick, Pool, TICK_SPACINGS, tickToPrice } from '@uniswap/v3-sdk'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { SupportedChainId } from '@src/constants/chains'
 import { ZERO_ADDRESS } from 'constants/misc'
 import JSBI from 'jsbi'

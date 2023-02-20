@@ -3,7 +3,7 @@ import { useCallback } from 'react'
 import { Token } from '@uniswap/sdk-core'
 import { Contract } from '@ethersproject/contracts'
 
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { getBytes32TokenContract, getTokenContract } from 'hooks/useContract'
 import { parseStringOrBytes32 } from 'lib/hooks/useCurrency'
 import { useAddUserToken } from 'state/user/hooks'

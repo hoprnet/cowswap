@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { Web3Provider } from '@ethersproject/providers'
 import useENSName from '@src/hooks/useENSName'
 import { UNSUPPORTED_WC_WALLETS } from 'constants/index'

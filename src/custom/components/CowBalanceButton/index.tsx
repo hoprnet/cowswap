@@ -6,7 +6,7 @@ import { ChainId } from 'state/lists/actions/actionsMod'
 import { formatMax, formatSmartLocaleAware } from '@cow/utils/format'
 import { COW } from 'constants/tokens'
 import { transparentize } from 'polished'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { supportedChainId } from 'utils/supportedChainId'
 
 export const Wrapper = styled.div<{ isLoading: boolean }>`

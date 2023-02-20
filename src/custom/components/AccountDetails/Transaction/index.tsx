@@ -1,6 +1,6 @@
 import { SafeInfoResponse } from '@gnosis.pm/safe-service-client'
 
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { RowFixed } from 'components/Row'
 
 import { TransactionStatusText as ActivityDetailsText, TransactionWrapper, Wrapper } from './styled'

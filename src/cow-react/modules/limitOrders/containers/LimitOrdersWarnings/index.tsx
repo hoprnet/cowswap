@@ -8,7 +8,7 @@ import {
   updateLimitOrdersWarningsAtom,
 } from '@cow/modules/limitOrders/state/limitOrdersWarningsAtom'
 import { useRateImpact } from '@cow/modules/limitOrders/hooks/useRateImpact'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useLimitOrdersTradeState } from '@cow/modules/limitOrders/hooks/useLimitOrdersTradeState'
 import { limitOrdersSettingsAtom } from '@cow/modules/limitOrders/state/limitOrdersSettingsAtom'
 import { useSetAtom } from 'jotai'

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { ContractTransaction } from '@ethersproject/contracts'
 import { CurrencyAmount, Token } from '@uniswap/sdk-core'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import MERKLE_DROP_ABI from '@cow/abis/MerkleDrop.json'
 import TOKEN_DISTRO_ABI from '@cow/abis/TokenDistro.json'
 import { MerkleDrop, TokenDistro } from '@cow/abis/types'

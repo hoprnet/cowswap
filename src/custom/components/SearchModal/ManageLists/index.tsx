@@ -1,6 +1,6 @@
 import { ManageLists as ManageListsMod, ListContainer, PopoverContainer } from './ManageListsMod'
 import { DEFAULT_NETWORK_FOR_LISTS, UNSUPPORTED_LIST_URLS } from 'constants/lists'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { CurrencyModalView } from '@src/components/SearchModal/CurrencySearchModal'
 import { TokenList } from '@uniswap/token-lists'
 import { acceptListUpdate, removeList, disableList, enableList } from 'state/lists/actions'

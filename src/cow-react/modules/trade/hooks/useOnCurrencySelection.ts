@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { Field } from 'state/swap/actions'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { Currency, Token } from '@uniswap/sdk-core'
 import { useAreThereTokensWithSameSymbol } from '@cow/common/hooks/useAreThereTokensWithSameSymbol'
 import { useTradeNavigate } from '@cow/modules/trade/hooks/useTradeNavigate'

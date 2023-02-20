@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useMultipleActivityDescriptors, groupActivitiesByDay } from 'hooks/useRecentActivity'
 import { supportedChainId } from 'utils/supportedChainId'
 import { LowerSectionSimple, Wrapper } from './styled'

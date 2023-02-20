@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 
 import { useRequestOrderCancellation } from 'state/orders/hooks'
 import { Order } from 'state/orders/actions'

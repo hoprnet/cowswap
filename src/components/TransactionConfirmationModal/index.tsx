@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
 import { Currency } from '@uniswap/sdk-core'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import Badge from 'components/Badge'
 import { getChainInfo } from '@src/constants/chainInfo'
 import { SupportedL2ChainId } from '@src/constants/chains'

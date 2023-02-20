@@ -9,7 +9,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { VCow as VCowType } from '@cow/abis/types'
 
 import { useVCowContract } from 'hooks/useContract'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useSingleContractMultipleData } from 'lib/hooks/multicall'
 import { useTransactionAdder } from 'state/enhancedTransactions/hooks'
 

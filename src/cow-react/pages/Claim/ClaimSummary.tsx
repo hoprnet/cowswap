@@ -9,7 +9,7 @@ import { ClaimStatus } from 'state/claim/actions'
 import { AMOUNT_PRECISION } from 'constants/index'
 import { useTokenBalance } from 'state/connection/hooks'
 import { V_COW } from 'constants/tokens'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import JSBI from 'jsbi'
 
 type ClaimSummaryProps = Pick<ClaimCommonTypes, 'hasClaims' | 'isClaimed'> & {

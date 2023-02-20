@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 
 import ArgentWalletContractABI from '../abis/argent-wallet-contract.json'
 import { ArgentWalletContract } from '../abis/types'

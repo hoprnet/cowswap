@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { getChainInfo } from '@src/constants/chainInfo'
 import { SupportedChainId } from '@src/constants/chains'
 import { ArrowUpRight } from 'react-feather'

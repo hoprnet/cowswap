@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 // eslint-disable-next-line no-restricted-imports
 import { t } from '@lingui/macro'
 import { useEffect } from 'react'

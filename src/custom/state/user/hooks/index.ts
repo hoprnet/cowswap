@@ -8,7 +8,7 @@ import {
   initFavouriteTokens,
 } from 'state/user/reducer'
 import { useUserTransactionTTL, deserializeToken } from '@src/state/user/hooks'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { SerializedToken } from 'state/user/types'
 import { NATIVE_CURRENCY_BUY_TOKEN } from 'constants/index'
 import { calculateValidTo } from '@cow/utils/time'

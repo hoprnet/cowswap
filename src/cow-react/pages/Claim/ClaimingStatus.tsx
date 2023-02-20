@@ -10,7 +10,7 @@ import {
 } from '@cow/pages/Claim/styled'
 import { ClaimStatus } from 'state/claim/actions'
 import { useClaimDispatchers, useClaimState } from 'state/claim/hooks'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import CowProtocolLogo from 'components/CowProtocolLogo'
 import { useAllClaimingTransactions } from 'state/enhancedTransactions/hooks'
 import { useMemo } from 'react'

@@ -5,7 +5,7 @@ import { useTradeTypeInfo } from '@cow/modules/trade/hooks/useTradeTypeInfo'
 import { TradeCurrenciesIds } from '@cow/modules/trade/types/TradeState'
 import { parameterizeTradeRoute } from '@cow/modules/trade/utils/parameterizeTradeRoute'
 import { isSupportedChainId } from 'lib/hooks/routing/clientSideSmartOrderRouter'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 
 interface UseTradeNavigateCallback {
   (chainId: SupportedChainId | null | undefined, { inputCurrencyId, outputCurrencyId }: TradeCurrenciesIds): void

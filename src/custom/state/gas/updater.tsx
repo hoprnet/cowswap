@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useGasPrices, useUpdateGasPrices } from './hooks'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { GAS_PRICE_UPDATE_THRESHOLD } from 'constants/index'
 import { gasFeeApi } from '@cow/api/gasPrices'
 import useBlockNumber from '@src/lib/hooks/useBlockNumber'

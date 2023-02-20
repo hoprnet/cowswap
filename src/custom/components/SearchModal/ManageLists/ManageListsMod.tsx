@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-restricted-imports
 import { t, Trans } from '@lingui/macro'
 import { TokenList } from '@uniswap/token-lists'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 // import { sendEvent } from 'components/analytics'
 // import Card from 'components/Card'
 // import { UNSUPPORTED_LIST_URLS } from '@src/constants/lists'

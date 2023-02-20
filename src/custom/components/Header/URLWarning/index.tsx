@@ -6,7 +6,7 @@ import { useAnnouncementVisible, useCloseAnnouncement } from 'state/profile/hook
 import { hashCode } from 'utils/misc'
 import useFetchFile from 'hooks/useFetchFile'
 import { Markdown } from 'components/Markdown'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 
 import { SupportedChainId as ChainId } from 'constants/chains'
 

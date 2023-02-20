@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { isTransactionRecent, useAllTransactions, useTransactionsByHash } from 'state/enhancedTransactions/hooks'
 import { useOrder, useOrders, useOrdersById, usePendingOrders } from 'state/orders/hooks'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { Order, OrderStatus } from 'state/orders/actions'
 import { EnhancedTransactionDetails } from 'state/enhancedTransactions/reducer'
 import { SupportedChainId as ChainId } from 'constants/chains'

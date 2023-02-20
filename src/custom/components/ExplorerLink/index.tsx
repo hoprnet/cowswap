@@ -1,5 +1,5 @@
 import { ExternalLink } from 'theme'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { BlockExplorerLinkType, getExplorerLabel, getEtherscanLink } from 'utils'
 import { supportedChainId } from 'utils/supportedChainId'
 

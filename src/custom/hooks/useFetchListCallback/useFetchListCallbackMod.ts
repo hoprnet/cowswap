@@ -7,7 +7,7 @@ import { useCallback } from 'react'
 import { useAppDispatch } from 'state/hooks'
 
 import { fetchTokenList } from 'state/lists/actions'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 
 export function useFetchListCallback(): (listUrl: string, sendDispatch?: boolean) => Promise<TokenList> {
   const dispatch = useAppDispatch()

@@ -6,7 +6,7 @@ import { ethFlowContextAtom, updateEthFlowContextAtom } from '../../../state/Eth
 import { useSetAtom } from 'jotai'
 import { useDerivedSwapInfo, useSwapActionHandlers } from 'state/swap/hooks'
 import { useSwapConfirmManager } from 'cow-react/modules/swap/hooks/useSwapConfirmManager'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { WrapUnwrapCallback } from 'hooks/useWrapCallback'
 import { TradeApproveCallback } from '@cow/common/containers/TradeApprove/useTradeApproveCallback'
 import { HandleSwapCallback } from '@cow/modules/swap/pure/SwapButtons'

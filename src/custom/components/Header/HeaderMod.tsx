@@ -2,7 +2,7 @@
 import useScrollPosition from '@react-hook/window-scroll'
 // import { CHAIN_INFO } from 'constants/chains'
 // import { SupportedChainId } from '@src/constants/chains'
-// import { useWeb3React } from '@web3-react/core'
+// import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 // import useTheme from 'hooks/useTheme'
 import { darken } from 'polished'
 import { NavLink } from 'react-router-dom'

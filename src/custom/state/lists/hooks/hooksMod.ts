@@ -4,7 +4,7 @@ import sortByListPriority from 'utils/listSort'
 import { AppState } from 'state'
 import { UNSUPPORTED_LIST_URLS, DEFAULT_NETWORK_FOR_LISTS } from 'constants/lists'
 import DEFAULT_TOKEN_LIST from '@uniswap/default-token-list'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import {
   addGpUnsupportedToken,
   AddGpUnsupportedTokenParams,

@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useAtomValue } from 'jotai/utils'
 import { limitOrdersAtom } from '@cow/modules/limitOrders/state/limitOrdersAtom'
 import { useEffect } from 'react'

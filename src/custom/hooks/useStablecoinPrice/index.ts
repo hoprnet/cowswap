@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount, Price, Token /*, TradeType*/ } from '@uniswap/sdk-core'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount'
 import { useEffect, useMemo, useRef, useState } from 'react'
 

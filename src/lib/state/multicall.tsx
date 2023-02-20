@@ -1,5 +1,5 @@
 import { createMulticall, ListenerOptions } from '@uniswap/redux-multicall'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { SupportedChainId } from '@src/constants/chains'
 import { useInterfaceMulticall } from 'hooks/useContract'
 import useBlockNumber from 'lib/hooks/useBlockNumber'

@@ -2,7 +2,7 @@ import React, { useCallback, useContext, useState } from 'react'
 import { Currency } from '@uniswap/sdk-core'
 import styled, { ThemeContext } from 'styled-components/macro'
 
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { getIsMetaMask } from 'connection/utils'
 import { CheckCircle } from 'react-feather'
 import { RowFixed } from 'components/Row'

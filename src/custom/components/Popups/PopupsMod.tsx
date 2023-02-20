@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { SupportedChainId } from 'constants/chains'
 import styled from 'styled-components/macro'
 import { MEDIA_WIDTHS } from 'theme'

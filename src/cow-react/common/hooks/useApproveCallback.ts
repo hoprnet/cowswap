@@ -1,6 +1,6 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { TransactionResponse } from '@ethersproject/providers'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useTokenContract } from 'hooks/useContract'
 import { useTransactionAdder } from 'state/enhancedTransactions/hooks'
 import { useCallback } from 'react'

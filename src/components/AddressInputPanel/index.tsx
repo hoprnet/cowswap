@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-restricted-imports
 import { t, Trans } from '@lingui/macro'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { ChangeEvent, Context, ReactNode, useCallback, useContext } from 'react'
 import styled, { DefaultTheme, ThemeContext } from 'styled-components/macro'
 

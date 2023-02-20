@@ -1,7 +1,7 @@
 import { useHigherUSDValue } from 'hooks/useStablecoinPrice'
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount'
 import { useCallback } from 'react'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useSafeMemoObject } from '@cow/common/hooks/useSafeMemo'
 import { RateInfoParams } from '@cow/common/pure/RateInfo'
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'

@@ -21,7 +21,7 @@ import CheckCircle from 'assets/cow-swap/check.svg'
 import ImportantIcon from 'assets/cow-swap/important.svg'
 import { ApprovalState, useApproveCallbackFromClaim } from 'hooks/useApproveCallback'
 import { useCurrencyBalance } from 'state/connection/hooks'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useClaimDispatchers, useClaimState } from 'state/claim/hooks'
 import { StyledNumericalInput } from 'components/CurrencyInputPanel/CurrencyInputPanelMod'
 

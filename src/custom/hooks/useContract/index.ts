@@ -16,7 +16,7 @@ import ERC20_ABI from 'abis/erc20.json'
 import ERC20_BYTES32_ABI from 'abis/erc20_bytes32.json'
 import { CoWSwapEthFlow, GPv2Settlement, VCow, Erc20 } from '@cow/abis/types'
 
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { getContract } from 'utils'
 
 import { useContract } from '@src/hooks/useContract'

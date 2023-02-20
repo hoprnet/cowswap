@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { supportedChainId } from 'utils/supportedChainId'
 import { useUpdateAtom } from 'jotai/utils'
 import { gasPriceStrategyAtom } from 'state/gas/atoms'

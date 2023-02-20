@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { Connector } from '@web3-react/types'
 // import { sendEvent } from 'components/analytics'
 import { AutoColumn } from 'components/Column'

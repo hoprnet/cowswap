@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useEffect } from 'react'
 import { UaEventOptions } from 'react-ga4/types/ga4'
 import { Path } from 'react-router-dom'

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo } from 'react'
 
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import useENS from 'hooks/useENS'
 import useTransactionConfirmationModal from 'hooks/useTransactionConfirmationModal'
 import { useErrorModal } from 'hooks/useErrorMessageAndModal'

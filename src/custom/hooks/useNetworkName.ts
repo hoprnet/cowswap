@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { CHAIN_INFO } from 'constants/chainInfo'
 import { supportedChainId } from 'utils/supportedChainId'
 

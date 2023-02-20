@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { getOrders, OrderMetaData } from '@cow/api/gnosisProtocol/api'
 import { AMOUNT_OF_ORDERS_TO_FETCH } from 'constants/index'
 import { supportedChainId } from 'utils/supportedChainId'

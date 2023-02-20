@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState, useRef, useMemo } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import NotificationBanner from 'components/NotificationBanner'
 import { useReferralAddress, useResetReferralAddress, useSetReferralAddressActive } from 'state/affiliate/hooks'
 import { hasTrades } from 'utils/trade'

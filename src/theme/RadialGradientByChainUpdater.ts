@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useEffect } from 'react'
 import { useDarkModeManager } from 'state/user/hooks'
 import { SupportedChainId } from '../constants/chains'

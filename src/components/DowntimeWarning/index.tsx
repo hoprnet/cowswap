@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { SupportedChainId } from '@src/constants/chains'
 import { AlertOctagon } from 'react-feather'
 import styled from 'styled-components/macro'

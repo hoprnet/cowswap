@@ -4,7 +4,7 @@ import { sdk } from 'utils/blocknative'
 import { replaceTransaction } from 'state/enhancedTransactions/actions'
 import { useAllTransactionHashes } from 'state/enhancedTransactions/hooks'
 import { Dispatch } from 'redux'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { supportedChainId } from 'utils/supportedChainId'
 
 function watchTxChanges(pendingHashes: string[], chainId: number, dispatch: Dispatch) {

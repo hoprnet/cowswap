@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useIsGnosisSafeWallet } from 'hooks/useWalletInfo'
 import { getSafeInfo } from '@cow/api/gnosisSafe'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { gnosisSafeAtom } from 'state/gnosisSafe/atoms'
 import { useUpdateAtom } from 'jotai/utils'
 

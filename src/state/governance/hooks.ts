@@ -9,7 +9,7 @@ import { t } from '@lingui/macro'
 import { abi as GOVERNANCE_ABI } from '@uniswap/governance/build/GovernorAlpha.json'
 import { abi as UNI_ABI } from '@uniswap/governance/build/Uni.json'
 import { CurrencyAmount, Token } from '@uniswap/sdk-core'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import GOVERNOR_BRAVO_ABI from 'abis/governor-bravo.json'
 import {
   GOVERNANCE_ALPHA_V0_ADDRESSES,

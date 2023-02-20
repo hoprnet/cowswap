@@ -10,7 +10,7 @@ import {
 import { ButtonPrimary, ButtonSecondary } from 'components/Button'
 import { ClaimStatus } from 'state/claim/actions'
 import { FooterNavButtons as FooterNavButtonsWrapper } from './styled'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { ClaimAddressProps } from './ClaimAddress'
 import { ClaimCommonTypes } from '@cow/pages/Claim/types'
 

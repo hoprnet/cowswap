@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useRef } from 'react'
 import { getAddress } from '@ethersproject/address'
 import { Token } from '@uniswap/sdk-core'
 
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useAddOrUpdateOrders } from 'state/orders/hooks'
 import { OrderMetaData } from '@cow/api/gnosisProtocol/api'
 import { useAllTokens } from 'hooks/Tokens'

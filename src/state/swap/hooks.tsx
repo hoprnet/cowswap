@@ -1,6 +1,6 @@
 //Mod import { Trans } from '@lingui/macro'
 import { Currency, CurrencyAmount, Percent, TradeType } from '@uniswap/sdk-core'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 // Mod import useAutoSlippageTolerance from 'hooks/useAutoSlippageTolerance'
 // Mod import { useBestTrade } from 'hooks/useBestTrade'
 // Mod import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount'

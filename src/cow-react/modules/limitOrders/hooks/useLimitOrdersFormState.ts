@@ -1,4 +1,4 @@
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { useTokenAllowance } from 'hooks/useTokenAllowance'
 import { LimitOrdersTradeState, useLimitOrdersTradeState } from './useLimitOrdersTradeState'
 import { useSafeMemo } from '@cow/common/hooks/useSafeMemo'

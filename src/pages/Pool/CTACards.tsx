@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { AutoColumn } from 'components/Column'
 import { getChainInfoOrDefault } from '@src/constants/chainInfo'
 import styled from 'styled-components/macro'

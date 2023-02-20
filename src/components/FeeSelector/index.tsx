@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
 import { Currency } from '@uniswap/sdk-core'
 import { FeeAmount } from '@uniswap/v3-sdk'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { sendEvent } from 'components/analytics'
 import { ButtonGray } from 'components/Button'
 import Card from 'components/Card'

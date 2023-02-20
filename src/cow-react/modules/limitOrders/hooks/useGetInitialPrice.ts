@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@cow/common/hooks/useWeb3React'
 import { Currency, Fraction } from '@uniswap/sdk-core'
 import { useAsyncMemo } from 'use-async-memo'
 
