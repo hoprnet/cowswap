@@ -41,8 +41,6 @@ import { MenuTree } from '@cow/modules/mainMenu/pure/MenuTree'
 import { getDefaultTradeState } from '@cow/modules/trade/types/TradeState'
 import { SupportedChainId } from '@cowprotocol/cow-sdk'
 
-import { WalletDetails } from '@cow/modules/newWalletIntegration/components/Web3WalletDetails'
-
 export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   // [ChainId.RINKEBY]: 'Rinkeby',
   // [ChainId.ROPSTEN]: 'Ropsten',
@@ -146,8 +144,6 @@ export default function Header() {
         </HeaderRow>
 
         <HeaderControls>
-          <WalletDetails />
-
           <NetworkSelector />
 
           <HeaderElement>

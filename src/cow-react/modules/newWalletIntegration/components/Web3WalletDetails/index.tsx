@@ -1,4 +1,4 @@
-import { ConnectOption } from './ConnectOption'
+import { ConnectOption } from '../ConnectOption'
 import CoinbaseIcon from 'assets/icons/coinbase.svg'
 import MetamaskIcon from 'assets/icons/metamask.png'
 import WalletConnectIcon from 'assets/icons/walletconnect.svg'

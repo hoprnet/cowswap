@@ -45,6 +45,7 @@ import { NetworkAlert } from 'components/NetworkAlert/NetworkAlert'
 import { useRateInfoParams } from '@cow/common/hooks/useRateInfoParams'
 import { useSetupSwapAmountsFromUrl } from '@cow/modules/swap/hooks/useSetupSwapAmountsFromUrl'
 import { useIsTradeUnsupported } from 'state/lists/hooks/hooksMod'
+import { WalletDetails } from '@cow/modules/newWalletIntegration/components/Web3WalletDetails'
 
 export function NewSwapWidget() {
   useSetupTradeState()
@@ -204,6 +205,8 @@ export function NewSwapWidget() {
           <NewSwapWarningsBottom {...swapWarningsBottomProps} />
         </styledEl.ContainerBox>
         <NetworkAlert />
+
+        <WalletDetails />
       </styledEl.Container>
     </>
   )

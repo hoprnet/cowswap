@@ -24,7 +24,7 @@ export class TallyHoWalletConnector extends InjectedConnector {
       name: 'TallyHo Wallet',
       shimDisconnect: true,
       getProvider() {
-        function isTallyWallet(ethereum?: Ethereum) {
+        function isTallyWallet(ethereum?: any) {
           const isTally = !!ethereum?.isTally || !!ethereum?.isTally
           if (!isTally) return
           return ethereum
