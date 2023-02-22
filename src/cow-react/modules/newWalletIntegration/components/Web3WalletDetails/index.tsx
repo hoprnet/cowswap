@@ -1,65 +1,28 @@
-import { useAccount, useConnect, useDisconnect } from 'wagmi'
-import { InjectedConnector } from 'wagmi/connectors/injected'
-import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
-import { LedgerConnector } from 'wagmi/connectors/ledger'
-import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
-import { mainnet, gnosis, goerli } from 'wagmi/chains'
-import { Connector } from 'wagmi'
-import { Buffer } from 'buffer'
+import { ConnectOption } from './ConnectOption'
+import CoinbaseIcon from 'assets/icons/coinbase.svg'
+import MetamaskIcon from 'assets/icons/metamask.png'
+import WalletConnectIcon from 'assets/icons/walletconnect.svg'
+import LedgerIcon from 'assets/icons/ledger.svg'
+import TrustWalletIcon from 'assets/icons/trustWallet.png'
+import TallyHoWallet from 'assets/icons/tallyho.svg'
+import { injected, coinbase, walletConnect, ledger, trustWallet, tallyHoWallet } from './connectors'
+import styled from 'styled-components/macro'
 
-// polyfill Buffer for client
-if (!window.Buffer) {
-  window.Buffer = Buffer
-}
-
-const injected = new InjectedConnector({
-  chains: [mainnet, gnosis, goerli],
-})
-
-const coinbase = new CoinbaseWalletConnector({
-  chains: [mainnet, gnosis, goerli],
-  options: {
-    appName: 'wagmi.sh',
-    jsonRpcUrl: 'https://eth-mainnet.alchemyapi.io/v2/yourAlchemyId',
-  },
-})
-
-const ledger = new LedgerConnector({
-  chains: [mainnet, gnosis, goerli],
-})
-
-const walletConnect = new WalletConnectConnector({
-  options: {
-    qrcode: true,
-  },
-})
-
-type ConnectType = {
-  connector: Connector
-  name: string
-}
-
-const Connect = ({ connector, name }: ConnectType) => {
-  const { connect } = useConnect({ connector })
-  const { disconnect } = useDisconnect()
-  const { address, isConnecting, connector: currentConnector } = useAccount()
-
-  const isConnected = currentConnector && connector.id === currentConnector.id && address
-
-  return (
-    <button disabled={isConnecting} onClick={() => (isConnected ? disconnect() : connect())}>
-      {isConnecting ? 'connecting' : isConnected ? 'disconnect' : `Connect with ${name}`}
-    </button>
-  )
-}
+const Wrapper = styled.div`
+  display: grid;
+  max-width: 400px;
+  grid-template-columns: 1fr 1fr;
+`
 
 export const WalletDetails = () => {
   return (
-    <div>
-      <Connect connector={injected} name={'Injected'} />
-      <Connect connector={coinbase} name={'Coinbase'} />
-      <Connect connector={ledger} name={'Ledger'} />
-      <Connect connector={walletConnect} name={'WalletConnect'} />
-    </div>
+    <Wrapper>
+      <ConnectOption icon={MetamaskIcon} connector={injected} name={'Injected'} />
+      <ConnectOption icon={CoinbaseIcon} connector={coinbase} name={'Coinbase'} />
+      <ConnectOption icon={LedgerIcon} connector={ledger} name={'Ledger'} />
+      <ConnectOption icon={WalletConnectIcon} connector={walletConnect} name={'WalletConnect'} />
+      <ConnectOption icon={TrustWalletIcon} connector={trustWallet} name={'Trust wallet'} />
+      <ConnectOption icon={TallyHoWallet} connector={tallyHoWallet} name={'TallyHo wallet'} />
+    </Wrapper>
   )
 }
