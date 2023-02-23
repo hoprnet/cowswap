@@ -8,6 +8,7 @@ import {
   injectedConnection,
   networkConnection,
   walletConnectConnection,
+  ledgerConnection,
 } from 'connection'
 
 export function getIsInjected(): boolean {
@@ -29,6 +30,7 @@ const CONNECTIONS: Connection[] = [
   walletConnectConnection,
   fortmaticConnection,
   networkConnection,
+  ledgerConnection,
 ]
 export function getConnection(c: Connector | ConnectionType): Connection {
   if (c instanceof Connector) {
@@ -51,6 +53,8 @@ export function getConnection(c: Connector | ConnectionType): Connection {
         return networkConnection
       case ConnectionType.GNOSIS_SAFE:
         return gnosisSafeConnection
+      case ConnectionType.LEDGER:
+        return ledgerConnection
     }
   }
 }
@@ -69,5 +73,7 @@ export function getConnectionName(connectionType: ConnectionType, isMetaMask?: b
       return 'Network'
     case ConnectionType.GNOSIS_SAFE:
       return 'Gnosis Safe'
+    case ConnectionType.LEDGER:
+      return 'Ledger'
   }
 }

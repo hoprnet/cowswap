@@ -29,6 +29,7 @@ import {
 } from 'components/WalletModal/InjectedOption'
 import PendingView from 'components/WalletModal/PendingView'
 import { WalletConnectOption } from 'components/WalletModal/WalletConnectOption'
+import { LedgerOption } from 'components/WalletModal/LedgerOption'
 
 // MOD imports
 import ModalMod from '@src/components/Modal'
@@ -276,12 +277,15 @@ export default function WalletModal({
 
     const fortmaticOption = (!isInjectedMobileBrowser && <FortmaticOption tryActivation={tryActivation} />) ?? null
 
+    const ledgerOption = <LedgerOption tryActivation={tryActivation} />
+
     return (
       <>
         {injectedOption}
         {walletConnectionOption}
         {coinbaseWalletOption}
         {fortmaticOption}
+        {ledgerOption}
       </>
     )
   }

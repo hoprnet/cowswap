@@ -3,6 +3,7 @@ import { MetaMask } from '@web3-react/metamask'
 import { Network } from '@web3-react/network'
 import { Actions, Connector } from '@web3-react/types'
 import { SupportedChainId } from 'constants/chains'
+import { LedgerConnector } from '@web3-react/ledger-connector'
 
 import COWSWAP_LOGO_URL from 'assets/cow-swap/cow.svg'
 import { RPC_URLS } from 'constants/networks'
@@ -14,6 +15,7 @@ export enum ConnectionType {
   FORTMATIC = 'FORTMATIC',
   NETWORK = 'NETWORK',
   GNOSIS_SAFE = 'GNOSIS_SAFE',
+  LEDGER = 'LEDGER',
 }
 
 export interface Connection {
@@ -146,4 +148,13 @@ export const coinbaseWalletConnection: Connection = {
   connector: web3CoinbaseWallet,
   hooks: web3CoinbaseWalletHooks,
   type: ConnectionType.COINBASE_WALLET,
+}
+
+const [web3Ledger, web3LedgerHooks] = initializeConnector<LedgerConnector>(
+  (actions) => new LedgerConnector({ actions, onError })
+)
+export const ledgerConnection: Connection = {
+  connector: web3Injected,
+  hooks: web3InjectedHooks,
+  type: ConnectionType.INJECTED,
 }
