@@ -92,22 +92,6 @@ export const CellElement = styled.div<{ doubleRow?: boolean }>`
   `}
 `
 
-export const CancelOrderBtn = styled.button`
-  background: none;
-  border: 0;
-  outline: none;
-  margin: 0 auto;
-  border-radius: 3px;
-  color: ${({ theme }) => theme.text2};
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-
-  :hover {
-    background: ${({ theme }) => transparentize(0.9, theme.black)};
-  }
-`
-
 export const CurrencyLogoPair = styled.div`
   display: flex;
 
@@ -115,16 +99,22 @@ export const CurrencyLogoPair = styled.div`
     border: 2px solid ${({ theme }) => theme.grey1};
   }
 
-  > img:last-child {
+  > img:last-child,
+  > svg:last-child {
     margin: 0 0 0 -14px;
   }
 `
 
-export const CurrencyCell = styled.div`
+export const CurrencyCell = styled.div<{ clickable?: boolean }>`
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   gap: 6px;
+  cursor: ${({ clickable }) => (clickable ? 'pointer' : '')};
+
+  :hover {
+    text-decoration: ${({ clickable }) => (clickable ? 'underline' : '')};
+  }
 `
 
 export const CurrencyAmountWrapper = styled.div`

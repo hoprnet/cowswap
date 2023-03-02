@@ -15,6 +15,8 @@ import { ExecutionPrice } from '@cow/modules/limitOrders/pure/ExecutionPrice'
 import { Currency, Price } from '@uniswap/sdk-core'
 import { LimitRateState } from '@cow/modules/limitOrders/state/limitRateAtom'
 import { formatInputAmount } from '@cow/utils/amountFormat'
+import { limitOrdersFeatures } from '@cow/constants/featureFlags'
+import { DEFAULT_DATE_FORMAT } from '@cow/constants/intl'
 
 const Wrapper = styled.div`
   font-size: 13px;
@@ -27,6 +29,7 @@ const ArrowDownRight = styled.div`
   display: flex;
   opacity: 0.3;
   margin: 0 3px 0 0;
+  color: ${({ theme }) => theme.text1};
 `
 export interface LimitOrdersDetailsProps {
   rateInfoParams: RateInfoParams
@@ -36,18 +39,10 @@ export interface LimitOrdersDetailsProps {
   limitRateState: LimitRateState
 }
 
-const dateTimeFormat: Intl.DateTimeFormatOptions = {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-}
-
 export function LimitOrdersDetails(props: LimitOrdersDetailsProps) {
   const { executionPrice, tradeContext, settingsState, rateInfoParams, limitRateState } = props
   const { account, recipient, recipientAddressOrName } = tradeContext.postOrderParams
-  const { feeAmount, activeRate } = limitRateState
+  const { feeAmount, activeRate, marketRate } = limitRateState
 
   const validTo = calculateLimitOrdersDeadline(settingsState)
   const expiryDate = new Date(validTo * 1000)
@@ -67,27 +62,30 @@ export function LimitOrdersDetails(props: LimitOrdersDetailsProps) {
         <styledEl.StyledRateInfo isInversedState={isInversedState} rateInfoParams={rateInfoParams} />
       </styledEl.DetailsRow>
 
-      <styledEl.DetailsRow>
-        <div>
-          <span>
-            <ArrowDownRight>
-              <SVG src={ArrowDownImage} />
-            </ArrowDownRight>
-            <p>est. execution price</p>{' '}
-            <QuestionHelper
-              text={
-                <ExecutionPriceTooltip
-                  isInversed={isInversed}
-                  feeAmount={feeAmount}
-                  displayedRate={displayedRate}
-                  executionPrice={executionPrice}
-                />
-              }
-            />
-          </span>
-        </div>
-        <div>{executionPrice && <ExecutionPrice executionPrice={executionPrice} isInversed={isInversed} />}</div>
-      </styledEl.DetailsRow>
+      {limitOrdersFeatures.DISPLAY_EXECUTION_TIME && (
+        <styledEl.DetailsRow>
+          <div>
+            <span>
+              <ArrowDownRight>
+                <SVG src={ArrowDownImage} />
+              </ArrowDownRight>
+              <p>order executes at</p>{' '}
+              <QuestionHelper
+                text={
+                  <ExecutionPriceTooltip
+                    isInversed={isInversed}
+                    feeAmount={feeAmount}
+                    marketRate={marketRate}
+                    displayedRate={displayedRate}
+                    executionPrice={executionPrice}
+                  />
+                }
+              />
+            </span>
+          </div>
+          <div>{executionPrice && <ExecutionPrice executionPrice={executionPrice} isInversed={isInversed} />}</div>
+        </styledEl.DetailsRow>
+      )}
 
       <styledEl.DetailsRow>
         <div>
@@ -101,7 +99,7 @@ export function LimitOrdersDetails(props: LimitOrdersDetailsProps) {
           />
         </div>
         <div>
-          <span>{expiryDate.toLocaleString(undefined, dateTimeFormat)}</span>
+          <span>{expiryDate.toLocaleString(undefined, DEFAULT_DATE_FORMAT)}</span>
         </div>
       </styledEl.DetailsRow>
       {/* <styledEl.DetailsRow>
