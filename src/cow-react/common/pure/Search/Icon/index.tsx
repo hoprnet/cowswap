@@ -1,7 +1,9 @@
+import { Clock } from './Clock'
 import { Keybind } from './Keybind'
 import { MagnifyingGlass } from './MagnifyingGlass'
+import { UpwardsTicker } from './UpwardsTicker'
 
-type IconName = 'magnifying-glass' | 'keybind-slash'
+export type IconName = 'magnifying-glass' | 'keybind-slash' | 'clock' | 'upwards-ticker'
 
 interface IconProps {
   name: IconName
@@ -20,6 +22,10 @@ export function Icon({ name, ...props }: IconProps) {
       return <MagnifyingGlass {...props} />
     case 'keybind-slash':
       return <Keybind {...props}>/</Keybind>
+    case 'clock':
+      return <Clock {...props} />
+    case 'upwards-ticker':
+      return <UpwardsTicker {...props} />
     default:
       return <></>
   }
