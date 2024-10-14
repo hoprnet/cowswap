@@ -39,7 +39,7 @@ import { getNativeSlippageTooltip, getNonNativeSlippageTooltip } from 'modules/s
 
 import useNativeCurrency from 'lib/hooks/useNativeCurrency'
 
-const MAX_DEADLINE_MINUTES = 180 // 3h
+const MAX_DEADLINE_MINUTES = 60 * 12 // 12h
 
 enum SlippageError {
   InvalidInput = 'InvalidInput',
