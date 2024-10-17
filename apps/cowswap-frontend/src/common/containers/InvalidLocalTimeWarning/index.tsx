@@ -4,6 +4,7 @@ import { GlobalWarning } from '../../pure/GlobalWarning'
 
 const TIME_OFFSET_THRESHOLD = 60 // 60 seconds
 
+// TODO: maybe remove this completely
 /**
  * When the local device time is not valid ()
  */
